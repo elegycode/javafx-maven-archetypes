@@ -1,0 +1,106 @@
+.root {
+    /*-fx-base: #a9a9a9;*/
+    /*-fx-background: #7E7E7E;*/
+    -fx-base: #3f3f3f;
+    -fx-background: #585858;
+}
+
+.newfile {
+	-fx-graphic: url('../icons/newfile.png');
+	-fx-image: url('../icons/newfile.png');
+}
+
+.openfile {
+	-fx-graphic: url('../icons/openfile.png');
+	-fx-image: url('../icons/openfile.png');
+}
+
+.savefile {
+	-fx-graphic: url('../icons/savefile.png');
+	-fx-image: url('../icons/savefile.png');
+}
+
+.saveas {
+	-fx-graphic: url('../icons/saveas.png');
+	-fx-image: url('../icons/saveas.png');
+}
+
+.close {
+	-fx-graphic: url('../icons/close.png');
+	-fx-image: url('../icons/close.png');
+}
+
+.closeall {
+	-fx-graphic: url('../icons/closeall.png');
+	-fx-image: url('../icons/closeall.png');
+}
+
+.import {
+	-fx-graphic: url('../icons/import.png');
+	-fx-image: url('../icons/import.png');
+}
+
+.export {
+	-fx-graphic: url('../icons/export.png');
+	-fx-image: url('../icons/export.png');
+}
+
+.printfile {
+	-fx-graphic: url('../icons/printfile.png');
+	-fx-image: url('../icons/printfile.png');
+}
+
+.redo {
+	-fx-graphic: url('../icons/redo.png');
+	-fx-image: url('../icons/redo.png');
+}
+
+.undo {
+	-fx-graphic: url('../icons/undo.png');
+	-fx-image: url('../icons/undo.png');
+}
+
+.cut {
+	-fx-graphic: url('../icons/cut.png');
+	-fx-image: url('../icons/cut.png');
+}
+
+.copy {
+	-fx-graphic: url('../icons/copy.png');
+	-fx-image: url('../icons/copy.png');
+}
+
+.paste {
+	-fx-graphic: url('../icons/paste.png');
+	-fx-image: url('../icons/paste.png');
+}
+
+.delete {
+	-fx-graphic: url('../icons/delete.png');
+	-fx-image: url('../icons/delete.png');
+}
+
+.search {
+	-fx-graphic: url('../icons/search.png');
+	-fx-image: url('../icons/search.png');
+}
+
+.overview {
+	-fx-graphic: url('../icons/overview.png');
+	-fx-image: url('../icons/overview.png');
+}
+
+.details {
+	-fx-graphic: url('../icons/details.png');
+	-fx-image: url('../icons/details.png');
+}
+
+.help {
+	-fx-graphic: url('../icons/help.png');
+	-fx-image: url('../icons/help.png');
+}
+
+.about {
+	-fx-graphic: url('../icons/app.png');
+	-fx-image: url('../icons/app.png');
+}

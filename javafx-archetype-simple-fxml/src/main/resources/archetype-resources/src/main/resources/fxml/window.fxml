@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="${package}.control.AppController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="TOP_LEFT">
+               <children>
+                  <MenuBar HBox.hgrow="ALWAYS">
+                    <menus>
+                      <Menu fx:id="fileMenu" mnemonicParsing="false" text="%MENU.FILEMENU">
+                        <items>
+                          <MenuItem fx:id="newMenuItem" accelerator="SHORTCUT+N" mnemonicParsing="false" onAction="#handleNewFile" text="%MENU.FILEMENU.NEW" />
+                          <MenuItem fx:id="openMenuItem" accelerator="SHORTCUT+O" mnemonicParsing="false" onAction="#handleOpenFile" text="%MENU.FILEMENU.OPEN" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="saveMenuItem" accelerator="SHORTCUT+S" mnemonicParsing="false" onAction="#handleSaveFile" text="%MENU.FILEMENU.SAVE" />
+                          <MenuItem fx:id="saveasMenuItem" accelerator="SHORTCUT+SHIFT+S" mnemonicParsing="false" onAction="#handleSaveas" text="%MENU.FILEMENU.SAVEAS" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="printMenuItem" accelerator="SHORTCUT+P" mnemonicParsing="false" onAction="#handlePrint" text="%MENU.FILEMENU.PRINT" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#handleExit" text="%MENU.FILEMENU.EXIT" />
+                        </items>
+                      </Menu>
+                      <Menu fx:id="editMenu" mnemonicParsing="false" text="%MENU.EDITMENU">
+                        <items>
+                          <MenuItem fx:id="undoMenuItem" accelerator="SHORTCUT+Z" mnemonicParsing="false" onAction="#handleUndo" text="%MENU.EDITMENU.UNDO" />
+                          <MenuItem fx:id="redoMenuItem" accelerator="SHORTCUT+Y" mnemonicParsing="false" onAction="#handleRedo" text="%MENU.EDITMENU.REDO" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="cutMenuItem" accelerator="SHORTCUT+X" mnemonicParsing="false" onAction="#handleCut" text="%MENU.EDITMENU.CUT" />
+                          <MenuItem fx:id="copyMenuItem" accelerator="SHORTCUT+C" mnemonicParsing="false" onAction="#handleCopy" text="%MENU.EDITMENU.COPY" />
+                          <MenuItem fx:id="pasteMenuItem" accelerator="SHORTCUT+V" mnemonicParsing="false" onAction="#handlePaste" text="%MENU.EDITMENU.PASTE" />
+                          <MenuItem fx:id="deleteMenuItem" accelerator="DELETE" mnemonicParsing="false" onAction="#handleDelete" text="%MENU.EDITMENU.DELETE" />
+                            <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="settingsMenuItem" accelerator="SHORTCUT+E" mnemonicParsing="false" onAction="#handleSettings" text="%MENU.EDITMENU.SETTINGS" />
+                        </items>
+                      </Menu>
+                      <Menu fx:id="helpMenu" mnemonicParsing="false" text="%MENU.HELPMENU">
+                        <items>
+                          <MenuItem fx:id="helpMenuItem" accelerator="F1" mnemonicParsing="false" onAction="#handleHelp" text="%MENU.HELPMENU.HELP" />
+                          <MenuItem fx:id="keymapMenuItem" mnemonicParsing="false" onAction="#handleKeymap" text="%MENU.HELPMENU.KEYMAP" />
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="aboutMenuItem" accelerator="F12" mnemonicParsing="false" onAction="#handleAbout" text="%MENU.HELPMENU.ABOUT" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <ToolBar HBox.hgrow="ALWAYS">
+                    <items>
+                        <Button fx:id="newButton" mnemonicParsing="false" onAction="#handleNewFile" styleClass="newfile">
+                            <tooltip>
+                                <Tooltip text="%MENU.FILEMENU.NEW" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="openButton" mnemonicParsing="false" onAction="#handleOpenFile" styleClass="openfile">
+                            <tooltip>
+                                <Tooltip text="%MENU.FILEMENU.OPEN" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveFile" styleClass="savefile">
+                            <tooltip>
+                                <Tooltip text="%MENU.FILEMENU.SAVE" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="saveasButton" mnemonicParsing="false" onAction="#handleSaveas" styleClass="saveas">
+                            <tooltip>
+                                <Tooltip text="%MENU.FILEMENU.SAVEAS" />
+                            </tooltip>
+                        </Button>
+                        <Separator orientation="VERTICAL" />
+                        <Button fx:id="printButton" mnemonicParsing="false" onAction="#handlePrint" styleClass="printfile">
+                            <tooltip>
+                                <Tooltip text="%MENU.FILEMENU.PRINT" />
+                            </tooltip>
+                        </Button>
+                        <Separator orientation="VERTICAL" />
+                        <Button fx:id="cutButton" mnemonicParsing="false" onAction="#handleCut" styleClass="cut">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.CUT" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="copyButton" mnemonicParsing="false" onAction="#handleCopy" styleClass="copy">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.COPY" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="pasteButton" mnemonicParsing="false" onAction="#handlePaste" styleClass="paste">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.PASTE" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDelete" styleClass="delete">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.DELETE" />
+                            </tooltip>
+                        </Button>
+                        <Separator orientation="VERTICAL" />
+                        <Button fx:id="undoButton" mnemonicParsing="false" onAction="#handleUndo" styleClass="undo">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.UNDO" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="redoButton" mnemonicParsing="false" onAction="#handleRedo" styleClass="redo">
+                            <tooltip>
+                                <Tooltip text="%MENU.EDITMENU.REDO" />
+                            </tooltip>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children></HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
